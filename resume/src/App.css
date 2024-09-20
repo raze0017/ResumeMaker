@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .logo {
@@ -39,4 +40,42 @@
 
 .read-the-docs {
   color: #888;
+}
+.forms {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transform: translate(-100px, 0px);
+}
+.output {
+  width: 850px; /* Adjusted width for a smaller view */
+  height: 1100px; /* Adjusted height */
+  border: 1px solid #ccc;
+  background-color: white;
+  overflow-y: auto; /* Scroll if necessary, but try to avoid */
+  transform: scale(1); /* Optionally scale down for a smaller feel */
+  transform-origin: top left;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #ffffff 0%, #9e9e9e 100%);
+}
+.cont {
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.items {
+}
+input:-webkit-autofill {
+  background-color: white !important; /* Change to any desired color */
+  color: black; /* Change the text color if needed */
+}
+
+input {
+  width: calc(100% - 10px); /* Adjust width to account for padding/margin */
+  padding: 10px;
+  border: 1px solid #000000;
+  background-color: white;
+  color: black;
+  border-radius: 4px;
 }
