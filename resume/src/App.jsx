@@ -5,7 +5,8 @@ import Education from "./components/education";
 import Experience from "./components/workExperience";
 import "./App.css";
 import Projects from "./components/projects";
-
+import { Object } from "prop-types";
+import PersonalDisplay from "./display/personal";
 function App() {
   const [formData, setFormData] = useState({
     PersonalInfo: { name: "", email: "", phone: "", place: "" },
@@ -16,6 +17,10 @@ function App() {
     projects: [{ name: "", functions: "", start: "", end: "" }],
     skills: { languages: "", tech: "", tools: "" },
   });
+  const [savedState, setSavedData] = useState(null);
+  const handleSave = () => {
+    setSavedData(formData);
+  };
   const handleChange = (e) => {
     const { name, value } = e.target;
     const [section, field] = name.split(".");
@@ -43,6 +48,7 @@ function App() {
               formData={formData.PersonalInfo}
               handleChange={handleChange}
             />
+            <button onClick={handleSave}>Save</button>
           </div>
           <div className="items edu">
             <h2>Education</h2>
@@ -50,6 +56,7 @@ function App() {
               formData={formData.education}
               handleChange={handleChange}
             />
+            <button onClick={handleSave}>Save</button>
           </div>
           <div className="items exp">
             <h2>Experience</h2>
@@ -57,6 +64,7 @@ function App() {
               formData={formData.workExperience}
               handleChange={handleChange}
             />
+            <button onClick={handleSave}>Save</button>
           </div>
           <div className="items proj">
             <h2>Projects</h2>
@@ -64,9 +72,16 @@ function App() {
               formData={formData.projects}
               handleChange={handleChange}
             />
+            <button onClick={handleSave}>Save</button>
           </div>
         </div>
-        <div className="output">Hlo</div>
+        <div className="output">
+          <div className="personalInfo">
+            {savedState && (
+              <PersonalDisplay personalInfo={savedState.PersonalInfo} />
+            )}
+          </div>
+        </div>
       </div>
     </>
   );
