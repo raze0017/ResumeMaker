@@ -1,13 +1,13 @@
 import FormComponent from "./FormComponent";
 
 const Projects = ({ formData, handleChange }) => {
-  const fields = ["Title", "functions", "start", "end"];
+  const fields = ["name", "functions", "start", "end"];
   return (
     <FormComponent
       formData={formData}
       handleChange={handleChange}
       fields={fields}
-      section="Projects"
+      section="projects"
     />
   );
 };

@@ -7,7 +7,7 @@ const Experience = ({ formData, handleChange }) => {
       formData={formData}
       handleChange={handleChange}
       fields={fields}
-      section="Experience"
+      section="workExperience"
     />
   );
 };
