@@ -80,3 +80,27 @@ input {
   border-radius: 10px;
   font-family: monospace;
 }
+body {
+  overflow: auto;
+  font-family: monospace;
+}
+.cont {
+  display: flex;
+  flex-direction: row;
+}
+.forms {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.output {
+  height: min(1000px, fit-content);
+
+  color: black;
+  font-family: "Arial", sans-serif;
+  border: 2px solid #333; /* Border for the whole section */
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,136 @@
+/* Main Container with Border */
+.perOut {
+  color: black;
+  font-family: "Arial", sans-serif;
+  max-width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Name Styling */
+.name {
+  font-size: 32px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* Contact Information */
+.sub {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
+.item {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.email,
+.phone,
+.place {
+  font-weight: 500;
+  color: #34495e;
+}
+
+.email::before {
+  content: "\2709 "; /* Envelope icon */
+}
+
+.phone::before {
+  content: "\260E "; /* Phone icon */
+}
+
+.place::before {
+  content: "\1F3E0 "; /* House icon */
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .item {
+    width: 100%;
+  }
+}
+
+/* General styling for sections */
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+/* Education Section */
+.edu1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.university,
+.grade {
+  font-size: 20px;
+  font-weight: bold;
+  color: #34495e;
+  text-align: left;
+}
+
+.dates {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.start,
+.end {
+  font-size: 16px;
+  color: #7f8c8d;
+  text-align: right;
+}
+
+.start::before,
+.end::before {
+  content: "• ";
+}
+
+/* Work Experience & Projects */
+.projectBox,
+.workBox {
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.job,
+.functions {
+  font-size: 18px;
+  color: #34495e;
+  margin-bottom: 5px;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+  .flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .university,
+  .start,
+  .end {
+    text-align: center;
+  }
+}
